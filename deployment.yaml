@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: devops-tp3-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: devops-tp3
+  template:
+    metadata:
+      labels:
+        app: devops-tp3
+    spec:
+      containers:
+      - name: devops-tp3
+        image: noukh/devops-tp3:latest
+        ports:
+        - containerPort: 80
