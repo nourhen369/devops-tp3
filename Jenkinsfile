@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Cloner le dépôt') {
             steps {
-                git 'https://github.com/nourhen369/devops-tp3.git'
+                git branch: 'master', url: 'https://github.com/nourhen369/devops-tp3.git'
             }
         }
 
