@@ -7,11 +7,11 @@ pipeline {
     }
 
     stages {
-        // stage('Cloner le dépôt') {
-        //     steps {
-        //         git branch: 'master', url: 'https://github.com/nourhen369/devops-tp3.git'
-        //     }
-        // }
+        stage('Cloner le dépôt') {
+            steps {
+                git branch: 'master', url: 'https://github.com/nourhen369/devops-tp3.git'
+            }
+        }
 
         stage('Construire l\'image Docker') {
             steps {
